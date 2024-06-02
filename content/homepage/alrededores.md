@@ -19,3 +19,9 @@ header_menu: true
 * Tren de las Sierras.
 
 * Hotel Edén.
+
+
+<iframe class="map" src="https://storage.googleapis.com/maps-solutions-hzha4q34yr/neighborhood-discovery/7dr5/neighborhood-discovery.html"
+  style="border:0;"
+  loading="lazy">
+</iframe>
