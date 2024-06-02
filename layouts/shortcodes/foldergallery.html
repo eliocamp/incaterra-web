@@ -1,0 +1,44 @@
+<!-- /layouts/shortcodes/foldergallery.html -->
+
+<style>
+    div.gallery {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    div.gallery a {
+        flex-grow: 1;
+        object-fit: cover;
+        margin: 2px;
+        display: flex;
+    }
+
+    div.gallery a img {
+        height: 200px;
+        object-fit: cover;
+        flex-grow: 1;
+    }
+</style>
+
+<div class="gallery">
+    {{ $path := print "/static/" (.Get "src")  }}
+    {{ $url  := print (.Get "src") }}
+    {{ range sort (readDir $path)  "Name" "asc" }}
+        {{/* don't try to display .DS_Store or directories */}}
+        {{ if and (ne .Name ".DS_Store") (not .IsDir)  }}
+            {{ $src := print "/" $url "/" .Name }}
+            <!-- {{ $where := print $path "/" .Name }}
+            {{ $thumb := replaceRE `.png$` ".jpg" .Name}}
+            {{ $urlthumb := replace $url "imgs" "thumbs" }}
+            {{ $thumb := print "/" $urlthumb "/" $thumb }} -->
+
+            {{/*
+                troubleshoot the $src variable as needed
+                <!-- <p>{{ $src }}</p> -->
+                */}}
+            <a data-fancybox="gallery" href="{{ $src }}">
+                <img src="{{ $thumb }}">  <br/>
+            </a>
+        {{ end }}
+    {{ end }}
+</div>
