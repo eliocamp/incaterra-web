@@ -1,8 +1,8 @@
 ---
-title: Cabaña para 8 personas
+title: Cabaña de dos dormitorios
 ---
 
-Cabaña de dos pisos para 8 personas.
+Cabaña de dos pisos con dos dormitorios.
 
 * Dos camas matrimoniales.
 * Una cama marinera en planta baja.

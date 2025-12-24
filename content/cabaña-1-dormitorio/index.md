@@ -1,5 +1,5 @@
 ---
-title: Cabañas para 4 personas
+title: Cabañas de un dormitorio
 ---
 
 Cabañas con una cocina-comedor y una habitación.
